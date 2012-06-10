@@ -72,6 +72,7 @@ function Player (deck) {
 Dealer.prototype = new Player();
 Dealer.prototype.constructor = Dealer; //something to do with constructors? investigate if things are wonky..
 function Dealer (deck) {
+	//dealer's rules for auto play
 	this.hit = function () {
 		if (this.getScore() >= 17) {
 			return false;
@@ -81,3 +82,15 @@ function Dealer (deck) {
 	};
 }
 
+var startGame = function (hands) {
+	//initializing the deck, all of the players, and the dealer
+	var master = new Deck(8);
+	var players = [];
+	for (i = 0; i < hands; i++) {
+		players.push(new Player(master));
+	}
+	var deal = new Dealer(master);
+};
+
+//for displaying the hands and such, create a display function which iterates through all of the players, drawing their hand (or upturned card?) to the board
+//this can be called at the beginning of the game, after every update refresh (ie, player presses hit or stay) and at the end of the game for the final reveal
