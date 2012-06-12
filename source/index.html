@@ -2,14 +2,25 @@
 <html>
 	
 	<head>
+	
+		<meta charset="UTF-8"> <!-- ensures correct character encoding from the start -->
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8"> 
+		
 		<link rel="stylesheet" href="style.css" />
-		<style type="text/javascript" src="bj.js"> </script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="bj.js"> </script>
 		<title> Javascript Blackjack!</title>
 	</head>
 	
 	<body>
-		<span>Blackjack goes here!!</span>
-		<img src="../assets/blackjack.gif" />
+	
+	<div id="playArea">
+		<div id="player0" class="player"></div>
+		<div id="player1" class="player"></div>
+		<div id="player2" class="player"></div>
+		<div id="player3" class="player"></div>
+		
+	</div> <!-- playArea -->
 	</body>
 
 </html>

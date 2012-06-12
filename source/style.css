@@ -1,8 +1,27 @@
-/* Stylin~ */
-span {
-	text-align: left;
-	font-weight: bold;
-	}
-img {
-	float: right;
-	}
+/* Stylin~ 
+B4B9BF: darkish grey;
+51E879: light green;
+*/
+body {
+	background-color: #B4B9BF;
+}
+
+#playArea {
+	width: 70em; 			/* 1120 / 1600 = .7 */
+	height: 40em;			/* 640 / 1600 = .4 */
+	margin: 0 15% 0 15%;
+	border-radius: .9375%;  /* 15 / 1600 = .009375 */
+	background: #51E879;
+}
+
+.player {
+	overflow: hidden;
+	position: relative;
+	width: 200px;
+	height: 400px;
+}
+
+.player img {
+	display: block;
+	position: absolute;
+}
